@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Image Recognition with TensorFlow.js</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/inceptionv3"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/resnet"></script>
+     <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+     <header>
+         <h1>Image Recognition with TensorFlow.js</h1>
+         <select id="modelSelect">
+             <option value="mobilenet">MobileNet</option>
+             <option value="inception">InceptionV3</option>
+             <option value="resnet">ResNet</option>
+         </select>
+     </header>
+     <main>
+         <input type="file" id="imageUpload" accept="image/*" multiple>
+         <div id="loading" class="loading">Loading...</div>
+         <div id="imagesContainer"></div>
+         <div id="result"></div>
+         <button id="clearHistory">Clear History</button>
+         <button id="downloadPredictions">Download Predictions</button>
+         <button id="themeToggle">🌙</button>
+     </main>
+     <script src="app.js"></script>
+ </body>
+ </html> 
